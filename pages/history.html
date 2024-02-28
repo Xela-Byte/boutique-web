@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boutique Travels</title>
+        <link rel="stylesheet" href="../css/output.css">
+    </head>
+
+    <body class="bg-[#f8f8f8] lg:flex lg:flex-row">
+        <div
+            class="w-full lg:w-24 lg:h-screen bg-white fixed top-0 lg:rounded-r-xl flex lg:flex-col justify-evenly items-center lg:space-y-10">
+            <img src="../images/logo.png" class="w-24 h-12" alt="Logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-calendar2-week"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" />
+                <path
+                    d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                <path
+                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+                <path
+                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                <path
+                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-chat-left-dots"
+                viewBox="0 0 16 16">
+                <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                <path
+                    d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path
+                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+        </div>
+        <div class="container mx-auto">
+            <div
+                class="flex mt-10 lg:ml-24 flex-col px-5 lg:px-10 py-10">
+               <div>
+                 <p class="text-[#b6b5b5]">Bienvenue Roméo</p>
+                <div class="flex flex-col pt-5 space-y-5 xl:w-full xl:flex-row xl:space-y-0 xl:space-x-5 xl:justify-between">
+                    <div class="flex flex-col xl:w-full">
+                        <p class="text-[#b6b5b5]">Classement Essential</p>
+                        <div class="flex flex-col bg-white px-3">
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p class="text-2xl font-semibold">$130.00</p>
+                            </div>
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p class="text-2xl font-semibold">$130.00</p>
+                            </div>
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p
+                                    class="text-2xl font-semibold text-[#02A0FC]">$130.00</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:justify-between p-3 space-y-3">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p
+                                    class="text-2xl font-semibold text-[#2F23FC]">$130.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col xl:w-full">
+                        <p class="text-[#b6b5b5]">Classement Essential</p>
+                        <div class="flex flex-col bg-white px-3">
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p class="text-2xl font-semibold">$130.00</p>
+                            </div>
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p class="text-2xl font-semibold">$130.00</p>
+                            </div>
+                            <div
+                                class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2 ">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p
+                                    class="text-2xl font-semibold text-[#02A0FC]">$130.00</p>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:justify-between p-3 space-y-3">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <p>Chinmay Sarasvati</p>
+                                <p class="text-[#b6b5b5]">23 Sep 2019</p>
+                                <p class="text-[#b6b5b5]">02:52PM</p>
+                                <p
+                                    class="text-2xl font-semibold text-[#2F23FC]">$130.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-7">
+                    <p class="text-[#b6b5b5]">Rejoindre événements
+                        communautaires ?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-3 space-y-3 md:space-y-0">
+                        <div class="bg-white rounded-xl p-5">
+                            <div class="flex gap-x-4">
+                                <div
+                                    class="bg-[#DAD7FE]  p-2 rounded-xl text-[0.8rem]">
+                                    <p>4 mars</p>
+                                </div>
+                                <div
+                                    class="bg-[#FFE5D3] p-2 rounded-xl text-[0.8rem]">
+                                    <p>Communauté</p>
+                                </div>
+
+                                <div
+                                    class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
+                                    <p>18H</p>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <p class="font-semibold text-lg">Session de
+                                    démarchage </p>
+                                <p
+                                    class="mt-2 text-[#b6b5b5] text-[0.8rem]">Rejoignez
+                                    Mathis dans une session de démarchage
+                                    téléphonique ! </p>
+                            </div>
+                            <div class="flex gap-x-2 py-3">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full" v>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class=" w-8 h-8 bi bi-plus text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-5">
+                            <div class="flex gap-x-4">
+                                <div
+                                    class="bg-[#FFF5CC] p-2 rounded-xl text-[0.8rem]">
+                                    <p>20 mars</p>
+                                </div>
+                                <div
+                                    class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
+                                    <p>Figma</p>
+                                </div>
+
+                            </div>
+                            <div class="pt-4">
+                                <p class="font-semibold text-lg">J’ai besoin
+                                    d’aide sur Figma</p>
+                                <p
+                                    class="mt-2 text-[#b6b5b5] text-[0.8rem]">Salut
+                                    les gars, je m’appelle léo et il y aurait
+                                    quelqu’un pour m’aider sur Figma, je galère
+                                    sur a faire ma maquette. </p>
+                            </div>
+                            <div class="flex gap-x-2 py-3">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class=" w-8 h-8 bi bi-plus text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-5">
+                            <div class="flex gap-x-4">
+                                <div
+                                    class="bg-[#FFE5D3] p-2 rounded-xl text-[0.8rem]">
+                                    <p>14 mars</p>
+                                </div>
+                                <div
+                                    class="bg-[#E2FBD7] p-2 rounded-xl text-[0.8rem]">
+                                    <p>15H</p>
+                                </div>
+
+                                
+                            </div>
+                            <div class="pt-4">
+                                <p class="font-semibold text-lg">Venez parler </p>
+                                <p
+                                    class="mt-2 text-[#b6b5b5] text-[0.8rem]">Je m’ennuie un peu,  ya des gens chaud pour taffer en appel ? </p>
+                            </div>
+                            <div class="flex gap-x-2 py-3">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                <img src="../images/user.png" alt="user"
+                                    class="w-10 h-10 rounded-full">
+                                
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class=" w-8 h-8 bi bi-plus text-white"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+               </div>
+               
+            </div>
+
+        </div>
+    </body>
+</html>
