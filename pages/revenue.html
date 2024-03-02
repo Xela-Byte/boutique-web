@@ -9,6 +9,9 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="../css/output.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <title>Boutique Travels</title>
     </head>
     <body class="bg-[#f8f8f8] lg:flex lg:flex-row">
@@ -22,7 +25,7 @@
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M20.584 22.6295C20.584 23.2939 20.0651 23.8332 19.4233 23.8332C18.7814 23.8332 18.2626 23.2939 18.2626 22.6295C18.2626 19.3109 15.6591 16.6109 12.459 16.6109C9.2589 16.6109 6.65541 19.3109 6.65541 22.6295C6.65541 23.2939 6.13657 23.8332 5.4947 23.8332C4.85282 23.8332 4.33398 23.2939 4.33398 22.6295C4.33398 17.9832 7.97979 14.2035 12.459 14.2035C16.9382 14.2035 20.584 17.9832 20.584 22.6295ZM12.459 4.57391C13.7393 4.57391 14.7804 5.65363 14.7804 6.98132C14.7804 8.309 13.7393 9.38873 12.459 9.38873C11.1787 9.38873 10.1376 8.309 10.1376 6.98132C10.1376 5.65363 11.1787 4.57391 12.459 4.57391ZM12.459 11.7961C15.0195 11.7961 17.1018 9.63669 17.1018 6.98132C17.1018 4.32595 15.0195 2.1665 12.459 2.1665C9.89845 2.1665 7.81613 4.32595 7.81613 6.98132C7.81613 9.63669 9.89845 11.7961 12.459 11.7961Z"
-                        fill="black" />
+                        fill="black" opacity="0.2" />
                 </svg>
             </a>
             <a href="./calendar.html">
@@ -75,13 +78,14 @@
                 <svg class="hover:scale-110" width="26" height="26"
                     viewBox="0 0 26 26" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
+                    <g>
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12.9989 17.3873C13.1711 17.3873 13.3434 17.4285 13.5004 17.5098L17.5835 19.6439L16.8068 15.1405C16.745 14.7873 16.8631 14.4277 17.1209 14.1774L20.4099 10.9968L15.8567 10.3338C15.5046 10.2828 15.2002 10.0629 15.042 9.74442L12.9989 5.63425L10.9557 9.74442C10.7975 10.0629 10.4931 10.2828 10.141 10.3338L5.58777 10.9968L8.87677 14.1774C9.13461 14.4277 9.25269 14.7873 9.19094 15.1405L8.41419 19.6439L12.4973 17.5098C12.6544 17.4285 12.8266 17.3873 12.9989 17.3873ZM19.0244 22.7011C18.8521 22.7011 18.6799 22.661 18.5228 22.5787L12.9989 19.6927L7.47494 22.5787C7.10878 22.7693 6.66677 22.7358 6.33636 22.4931C6.00269 22.2504 5.83694 21.8398 5.90627 21.4336L6.95927 15.3366L2.49594 11.0195C2.19802 10.7324 2.09186 10.3013 2.21861 9.908C2.34427 9.51475 2.68444 9.22875 3.09286 9.16917L9.26894 8.27217L12.0282 2.719C12.3944 1.98234 13.6034 1.98234 13.9695 2.719L16.7288 8.27217L22.9049 9.16917C23.3133 9.22875 23.6534 9.51475 23.7791 9.908C23.9059 10.3013 23.7997 10.7324 23.5018 11.0195L19.0384 15.3366L20.0914 21.4336C20.1608 21.8398 19.995 22.2504 19.6614 22.4931C19.4739 22.6318 19.2497 22.7011 19.0244 22.7011Z"
                             fill="black" />
                     </g>
                 </svg>
             </a>
+
             <svg class="hover:scale-110" width="26" height="26"
                 viewBox="0 0 26 26" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -103,186 +107,151 @@
         </div>
         <div class="container mx-auto">
             <div
-                class="flex mt-10 lg:ml-24 flex-col lg:flex-row lg:justify-between px-5 lg:px-10 py-10">
-                <div class="lg:w-1/2" id="main-content">
-                    <p class="text-[#b6b5b5]">Bienvenue Roméo</p>
-                    <div
-                        class="w-full bg-white mt-4 mb-6 pt-4 rounded-xl relative">
-                        <p class="text-2xl ml-4 font-semibold">$5800,63</p>
-                        <p class="text-base mt-2 ml-4">Depuis le</p>
-                        <p class="text-sm text-[#b6b5b5] ml-4 mt-2">18 Janv
-                            2024</p>
-                        <svg class="absolute top-4 right-4" width="26"
-                            height="26" viewBox="0 0 26 26" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M7.58333 17.3332C7.58333 16.7373 8.07083 16.2498 8.66667 16.2498C9.2625 16.2498 9.75 16.7373 9.75 17.3332C9.75 17.929 9.2625 18.4165 8.66667 18.4165C8.07083 18.4165 7.58333 17.929 7.58333 17.3332ZM13 16.2498H17.3333C17.9292 16.2498 18.4167 16.7373 18.4167 17.3332C18.4167 17.929 17.9292 18.4165 17.3333 18.4165H13C12.4042 18.4165 11.9167 17.929 11.9167 17.3332C11.9167 16.7373 12.4042 16.2498 13 16.2498ZM19.5 21.6665H6.5C5.90308 21.6665 5.41667 21.1801 5.41667 20.5832V14.0832H20.5833V20.5832C20.5833 21.1801 20.0969 21.6665 19.5 21.6665ZM6.5 6.49984H7.58333V7.58317C7.58333 8.179 8.07083 8.6665 8.66667 8.6665C9.2625 8.6665 9.75 8.179 9.75 7.58317V6.49984H16.25V7.58317C16.25 8.179 16.7375 8.6665 17.3333 8.6665C17.9292 8.6665 18.4167 8.179 18.4167 7.58317V6.49984H19.5C20.0969 6.49984 20.5833 6.98625 20.5833 7.58317V11.9165H5.41667V7.58317C5.41667 6.98625 5.90308 6.49984 6.5 6.49984ZM19.5 4.33317H18.4167V3.24984C18.4167 2.654 17.9292 2.1665 17.3333 2.1665C16.7375 2.1665 16.25 2.654 16.25 3.24984V4.33317H9.75V3.24984C9.75 2.654 9.2625 2.1665 8.66667 2.1665C8.07083 2.1665 7.58333 2.654 7.58333 3.24984V4.33317H6.5C4.70817 4.33317 3.25 5.79134 3.25 7.58317V20.5832C3.25 22.375 4.70817 23.8332 6.5 23.8332H19.5C21.2918 23.8332 22.75 22.375 22.75 20.5832V7.58317C22.75 5.79134 21.2918 4.33317 19.5 4.33317Z"
-                                fill="black" />
-                        </svg>
-                        <img src="../images/chart-image.png"
-                            class="w-full h-1/2 rounded-b-xl"
-                            alt="ChartImage">
+                class="flex mt-10 lg:ml-24 flex-col px-5 lg:px-10 py-10">
+
+                <p class="text-[#b6b5b5]">Bienvenue Roméo</p>
+
+                <div class="flex space-x-3 py-5">
+                    <div class="bg-[#C5C9E9] px-5 py-2 rounded-xl">
+                        <p>Mois</p>
                     </div>
-
-                    <p class="text-[#b6b5b5]">Modules de formation</p>
-
-                    <div class="w-full flex flex-col py-3 my-6">
-                        <a href="./video-formation.html"
-                            class="no-underline">
-                            <div
-                                class="w-full bg-white rounded-xl flex items-center justify-center flex-col no-underline pt-5">
-                                <img src="../images/play-btn.png"
-                                    class="w-40 h-20"
-                                    alt="PlayButton">
-                                <div class="p-4">
-                                    <p class="text-lg font-semibold">Formation
-                                        Vidéo</p>
-                                    <p
-                                        class="mt-2 text-[#b6b5b5] text-[0.8rem]">Nos
-                                        vidéos de formation
-                                        sont conçues pour enrichir votre
-                                        expérience
-                                        d'apprentissage avec du contenu visuel
-                                        captivant. Elles abordent divers sujets
-                                        relatifs à la Méthode du Jeune Indien,
-                                        des
-                                        démonstrations pratiques aux études de
-                                        cas
-                                        inspirantes. </p>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="w-full flex flex-col py-3 my-6">
-                        <a href="./encrite.html" class="no-underline">
-                            <div
-                                class="w-full bg-white rounded-xl flex items-center justify-center flex-col no-underline pt-5">
-                                <img src="../images/encrite.png"
-                                    class="w-40 h-20"
-                                    alt="PlayButton">
-                                <div class="p-4">
-                                    <p class="text-lg font-semibold">Formation
-                                        Ecrite</p>
-                                    <p
-                                        class="mt-2 text-[#b6b5b5] text-[0.8rem]">Plongez
-                                        dans la richesse
-                                        de nos modules écrits, conçus pour vous
-                                        fournir des connaissances approfondies
-                                        sur
-                                        la </p>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="w-full flex flex-col py-3 my-6">
-                        <a href="./vocal-formation.html" class="no-underline">
-                            <div
-                                class="w-full bg-white rounded-xl flex items-center justify-center flex-col pt-5">
-                                <img src="../images/vocal-image.png"
-                                    class="w-40 h-20"
-                                    alt="PlayButton">
-                                <div class="p-4">
-                                    <p class="text-lg font-semibold">Formation
-                                        Vocal</p>
-                                    <p
-                                        class="mt-2 text-[#b6b5b5] text-[0.8rem]">Nos
-                                        sessions de formation
-                                        vocale sont le cœur de notre approche
-                                        interactive. Pendant ces appels, vous
-                                        bénéficierez </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="lg:w-1/3">
-                    <p class="text-[#b6b5b5]">Actualités</p>
-
-                    <div class="w-full bg-white rounded-xl px-4 my-6 py-6">
-                        <div class="flex gap-x-4">
-                            <div
-                                class="bg-[#DAD7FE] p-2 rounded-xl text-[0.8rem]">
-                                <p>NEW</p>
-                            </div>
-                            <div
-                                class="bg-[#FFE5D3] p-2 rounded-xl text-[0.8rem]">
-                                <p>Formations</p>
-                            </div>
-                        </div>
-                        <img src="../images/logic-table.png" class="w-full mt-4"
-                            alt>
-                        <div class="pt-4">
-                            <p class="font-semibold text-lg">Nouveau
-                                logiciel</p>
-                            <p class="mt-2 text-[#b6b5b5] text-[0.8rem]">Trouvez
-                                des clients
-                                rapidement grace a notre application de
-                                recherche automatique</p>
-                        </div>
-                        <p class="mt-2 text-[#4339F2] text-[0.8rem]">Details</p>
-                    </div>
-
-                    <div class="w-full bg-white rounded-xl px-4 my-6 py-6">
-                        <div class="flex gap-x-4">
-                            <div
-                                class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
-                                <p>UP</p>
-                            </div>
-                            <div
-                                class="bg-[#FFF5CC] p-2 rounded-xl text-[0.8rem]">
-                                <p>Parrainage</p>
-                            </div>
-                            <div
-                                class="bg-[#DAD7FE] p-2 rounded-xl text-[0.8rem]">
-                                <p>NEW</p>
-                            </div>
-                        </div>
-
-                        <div class="pt-4">
-                            <p class="font-semibold text-lg">Système de
-                                Parrainage </p>
-                            <p
-                                class="mt-2 text-[#b6b5b5] text-[0.8rem]">Découvrez
-                                notre nouveau système de structure de récompense
-                                de parrainage </p>
-                        </div>
-                        <p class="mt-2 text-[#4339F2] text-[0.8rem]">Details</p>
-                    </div>
-
-                    <div class="w-full h-60 relative">
-                        <img src="../images/designer.png"
-                            class="w-full h-full object-cover rounded-lg"
-                            alt="Designer">
-                        <div
-                            class="w-full h-full top-0 flex flex-col justify-between p-5 absolute">
-                            <div class="flex gap-x-4">
-                                <div
-                                    class="bg-[#FFF5CC] p-2 rounded-xl text-[0.8rem]">
-                                    <p>Conférence</p>
-                                </div>
-
-                                <div
-                                    class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
-                                    <p>Designer</p>
-                                </div>
-                            </div>
-
-                            <div class="text-white">
-                                <p class="text-xl mb-2">Tuto design maquette</p>
-                                <p class="text-sm">Entrainez vous en direct ce
-                                    Mardi
-                                    21 Mars a créer des maquettes Figma</p>
-                            </div>
-                        </div>
+                    <div class="bg-[#1E1263] px-5 py-2 rounded-xl">
+                        <p class="text-white">Tout</p>
                     </div>
                 </div>
+
+                <div class="flex flex-col lg:flex-row w-full lg:pt-5 lg:space-x-3 xl:space-x-5">
+                    <div class="flex flex-col mb-5 w-full lg:w-1/2">
+                        <p class="text-xl mb-2">Vos objectifs</p>
+                        <div class="rounded-lg bg-white p-3" id="chart"
+                            ></div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-1/2">
+                        <p class="text-xl mb-2">Vos revenus</p>
+                        <div class="rounded-lg bg-white p-3" id="line-chart"
+                            ></div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
+      
+      <script>
+         var options = {
+          series: [{
+            name: "Vos revenus",
+            data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+          },
+          {
+            name: "Mois dernier",
+            data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+          },
+          {
+            name: 'Moyenne',
+            data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+       colors: ['#4339F2', '#FF3A29', '#FFB200'],
+        legend: {
+          tooltipHoverFormatter: function(val, opts) {
+            return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
+          }
+        },
+        markers: {
+          size: 0,
+          hover: {
+            sizeOffset: 6
+          }
+        },
+        xaxis: {
+          categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+            '10 Jan', '11 Jan', '12 Jan'
+          ],
+        },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " (mins)"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " per session"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                }
+              }
+            }
+          ]
+        },
+        grid: {
+          borderColor: '#f1f1f1',
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#line-chart"), options);
+        chart.render();
+      </script>
+
+        <script>
+     var options = {
+          series: [{
+          data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        colors: ["#FF3A29"],
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            horizontal: true,
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        xaxis: {
+          categories: [ "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre"
+          ],
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+</script>
+
     </body>
 </html>
