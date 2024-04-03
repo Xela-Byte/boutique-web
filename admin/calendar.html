@@ -3,14 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boutique Travels</title>
+    <title>Boutique Travel</title>
     <link rel="stylesheet" href="../css/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          initialDate: '2024-02-07',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay',
+          },
+          events: [
+            {
+              title: 'Design Conference',
+              start: '2024-02-01',
+              color: '#7551E9',
+            },
+            {
+              title: 'Weekend Festival',
+              start: '2024-02-11',
+              end: '2024-02-13',
+              color: '#E99151',
+            },
+            {
+              title: 'Glastonbury Festival',
+              start: '2024-02-07',
+              end: '2024-02-10',
+              color: '#E99151',
+            },
+
+            {
+              title: 'Glastonbury Festival',
+              start: '2024-02-20',
+              end: '2024-02-24',
+              color: '#516FE9',
+            },
+          ],
+          className: 'p-3',
+        });
+
+        calendar.render();
+      });
+    </script>
   </head>
 
   <body class="bg-[#f8f8f8] lg:flex lg:flex-row">
     <!-- Navbar -->
     <div
-      class="w-full z-50 lg:w-24 py-3 lg:h-screen bg-white fixed top-0 lg:rounded-r-xl flex lg:flex-col justify-evenly items-center lg:space-y-10"
+      class="w-full z-50 lg:w-24 lg:h-screen py-3 bg-white fixed top-0 lg:rounded-r-xl flex lg:flex-col justify-evenly items-center lg:space-y-10"
     >
       <img src="../images/logo.png" class="w-24 h-12" alt="Logo" />
       <a href="./dashboard.html">
@@ -43,7 +88,6 @@
             clip-rule="evenodd"
             d="M7.58333 17.3332C7.58333 16.7373 8.07083 16.2498 8.66667 16.2498C9.2625 16.2498 9.75 16.7373 9.75 17.3332C9.75 17.929 9.2625 18.4165 8.66667 18.4165C8.07083 18.4165 7.58333 17.929 7.58333 17.3332ZM13 16.2498H17.3333C17.9292 16.2498 18.4167 16.7373 18.4167 17.3332C18.4167 17.929 17.9292 18.4165 17.3333 18.4165H13C12.4042 18.4165 11.9167 17.929 11.9167 17.3332C11.9167 16.7373 12.4042 16.2498 13 16.2498ZM19.5 21.6665H6.5C5.90308 21.6665 5.41667 21.1801 5.41667 20.5832V14.0832H20.5833V20.5832C20.5833 21.1801 20.0969 21.6665 19.5 21.6665ZM6.5 6.49984H7.58333V7.58317C7.58333 8.179 8.07083 8.6665 8.66667 8.6665C9.2625 8.6665 9.75 8.179 9.75 7.58317V6.49984H16.25V7.58317C16.25 8.179 16.7375 8.6665 17.3333 8.6665C17.9292 8.6665 18.4167 8.179 18.4167 7.58317V6.49984H19.5C20.0969 6.49984 20.5833 6.98625 20.5833 7.58317V11.9165H5.41667V7.58317C5.41667 6.98625 5.90308 6.49984 6.5 6.49984ZM19.5 4.33317H18.4167V3.24984C18.4167 2.654 17.9292 2.1665 17.3333 2.1665C16.7375 2.1665 16.25 2.654 16.25 3.24984V4.33317H9.75V3.24984C9.75 2.654 9.2625 2.1665 8.66667 2.1665C8.07083 2.1665 7.58333 2.654 7.58333 3.24984V4.33317H6.5C4.70817 4.33317 3.25 5.79134 3.25 7.58317V20.5832C3.25 22.375 4.70817 23.8332 6.5 23.8332H19.5C21.2918 23.8332 22.75 22.375 22.75 20.5832V7.58317C22.75 5.79134 21.2918 4.33317 19.5 4.33317Z"
             fill="black"
-            opacity="0.2"
           />
         </svg>
       </a>
@@ -61,6 +105,7 @@
               clip-rule="evenodd"
               d="M8.1206 10.3096C5.91927 12.6919 5.96585 16.4684 8.26035 18.8073C9.38052 19.9524 10.869 20.5839 12.455 20.585H12.4604C14.0497 20.585 15.5436 19.9534 16.6692 18.8073C19.0049 16.4261 19.0005 12.5532 16.6594 10.1753L13.4246 6.87003C13.0974 9.55886 12.0889 11.9184 10.2927 11.9184C9.74235 11.9184 8.84535 11.6735 8.1206 10.3096ZM12.4604 22.7517H12.4529C10.2797 22.7495 8.24085 21.8883 6.71227 20.3229C3.55544 17.1054 3.5511 11.8696 6.70252 8.65753L7.76744 7.5807C8.0426 7.30553 8.44235 7.19936 8.82044 7.29795C9.19635 7.39978 9.48885 7.69553 9.58635 8.07253C9.83552 9.03561 10.1324 9.50903 10.2959 9.68886C10.6805 9.2837 11.376 7.64678 11.376 4.8767C11.376 4.71745 11.376 4.56686 11.3674 4.41628C11.3468 4.0967 11.4692 3.78361 11.701 3.56261C12.1311 3.1542 12.8201 3.1542 13.2329 3.57886L18.2054 8.65861C21.3687 11.8696 21.3741 17.1054 18.2162 20.3239C16.6789 21.8904 14.6358 22.7517 12.4604 22.7517Z"
               fill="black"
+              opacity="0.2"
             />
           </g>
         </svg>
@@ -162,274 +207,227 @@
     </div>
     <div class="container mx-auto">
       <div class="flex mt-10 lg:ml-24 flex-col px-5 lg:px-10 py-10">
-        <div>
-          <p class="text-[#b6b5b5]">Bienvenue Roméo</p>
+        <p class="text-[#b6b5b5]">Bienvenue administrateur Roméo</p>
+        <div class="flex flex-col lg:flex-row lg:space-x-24 xl:space-x-5 my-5">
           <div
-            class="flex flex-col pt-5 space-y-5 xl:w-full xl:flex-row xl:space-y-0 xl:space-x-5 xl:justify-between"
-          >
-            <div class="flex flex-col xl:w-full">
-              <p class="text-[#b6b5b5]">Classement Essential</p>
-              <div class="flex flex-col bg-white px-3">
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
+            class="bg-white p-5 rounded-lg overflow-x-scroll xl:w-3/4"
+            id="calendar"
+          ></div>
+          <div class="bg-white rounded-lg border-[#B9B9B9] my-5 lg:my-0">
+            <div class="p-5 lg:flex lg:items-center lg:justify-center">
+              <a href="./">
+                <button class="bg-[#4880FF] px-7 py-3 rounded-md text-white">
+                  + Add New Event
+                </button>
+              </a>
+            </div>
+            <div class="p-5">
+              <p class="font-bold text-[#202224] text-lg">You are going to</p>
+            </div>
+
+            <div class="flex p-5 space-x-5 border-y border-[#E0E0E0]">
+              <img
+                src="../images/designer.png"
+                class="w-10 h-10 rounded-full"
+                alt=""
+              />
+
+              <div class="space-y-2">
+                <p class="font-bold">Design Conference</p>
+                <p class="text-sm">Today 07:19 AM</p>
+                <p class="text-sm">56 Davion Mission Suite 157</p>
+                <p class="text-sm">Meaghanberg</p>
+
+                <div class="flex space-x-2">
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold text-[#02A0FC]">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3"
-                >
-                  <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
-                  />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold text-[#2F23FC]">$130.00</p>
+
+                  <div
+                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[#4880FF] bg-[#d4e0fa] text-[#4880FF]"
+                  >
+                    <p class="text-xs">15+</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-col xl:w-full">
-              <p class="text-[#b6b5b5]">Classement Essential</p>
-              <div class="flex flex-col bg-white px-3">
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
+
+            <div class="flex p-5 space-x-5 border-y border-[#E0E0E0]">
+              <img
+                src="../images/designer.png"
+                class="w-10 h-10 rounded-full"
+                alt=""
+              />
+
+              <div class="space-y-2">
+                <p class="font-bold">Design Conference</p>
+                <p class="text-sm">Today 07:19 AM</p>
+                <p class="text-sm">56 Davion Mission Suite 157</p>
+                <p class="text-sm">Meaghanberg</p>
+
+                <div class="flex space-x-2">
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3 border-b-2"
-                >
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold text-[#02A0FC]">$130.00</p>
-                </div>
-                <div
-                  class="flex flex-col md:flex-row md:justify-between p-3 space-y-3"
-                >
-                  <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
-                  />
-                  <p>Chinmay Sarasvati</p>
-                  <p class="text-[#b6b5b5]">23 Sep 2019</p>
-                  <p class="text-[#b6b5b5]">02:52PM</p>
-                  <p class="text-2xl font-semibold text-[#2F23FC]">$130.00</p>
+
+                  <div
+                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[#4880FF] bg-[#d4e0fa] text-[#4880FF]"
+                  >
+                    <p class="text-xs">15+</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pt-7">
-            <p class="text-[#b6b5b5]">Rejoindre événements communautaires ?</p>
-            <div
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-3 space-y-3 md:space-y-0"
-            >
-              <div class="bg-white rounded-xl p-5">
-                <div class="flex gap-x-4">
-                  <div class="bg-[#DAD7FE] p-2 rounded-xl text-[0.8rem]">
-                    <p>4 mars</p>
-                  </div>
-                  <div class="bg-[#FFE5D3] p-2 rounded-xl text-[0.8rem]">
-                    <p>Communauté</p>
-                  </div>
 
-                  <div class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
-                    <p>18H</p>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <p class="font-semibold text-lg">Session de démarchage</p>
-                  <p class="mt-2 text-[#b6b5b5] text-[0.8rem]">
-                    Rejoignez Mathis dans une session de démarchage téléphonique
-                    !
-                  </p>
-                </div>
-                <div class="flex gap-x-2 py-3">
+            <div class="flex p-5 space-x-5 border-y border-[#E0E0E0]">
+              <img
+                src="../images/designer.png"
+                class="w-10 h-10 rounded-full"
+                alt=""
+              />
+
+              <div class="space-y-2">
+                <p class="font-bold">Design Conference</p>
+                <p class="text-sm">Today 07:19 AM</p>
+                <p class="text-sm">56 Davion Mission Suite 157</p>
+                <p class="text-sm">Meaghanberg</p>
+
+                <div class="flex space-x-2">
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
-                    v
-                  />
-                  <div
-                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="w-8 h-8 bi bi-plus text-white"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-white rounded-xl p-5">
-                <div class="flex gap-x-4">
-                  <div class="bg-[#FFF5CC] p-2 rounded-xl text-[0.8rem]">
-                    <p>20 mars</p>
-                  </div>
-                  <div class="bg-[#CCF8FE] p-2 rounded-xl text-[0.8rem]">
-                    <p>Figma</p>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <p class="font-semibold text-lg">
-                    J’ai besoin d’aide sur Figma
-                  </p>
-                  <p class="mt-2 text-[#b6b5b5] text-[0.8rem]">
-                    Salut les gars, je m’appelle léo et il y aurait quelqu’un
-                    pour m’aider sur Figma, je galère sur a faire ma maquette.
-                  </p>
-                </div>
-                <div class="flex gap-x-2 py-3">
-                  <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
 
                   <div
-                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center"
+                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[#4880FF] bg-[#d4e0fa] text-[#4880FF]"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="w-8 h-8 bi bi-plus text-white"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                      />
-                    </svg>
+                    <p class="text-xs">15+</p>
                   </div>
                 </div>
               </div>
-              <div class="bg-white rounded-xl p-5">
-                <div class="flex gap-x-4">
-                  <div class="bg-[#FFE5D3] p-2 rounded-xl text-[0.8rem]">
-                    <p>14 mars</p>
-                  </div>
-                  <div class="bg-[#E2FBD7] p-2 rounded-xl text-[0.8rem]">
-                    <p>15H</p>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <p class="font-semibold text-lg">Venez parler</p>
-                  <p class="mt-2 text-[#b6b5b5] text-[0.8rem]">
-                    Je m’ennuie un peu, ya des gens chaud pour taffer en appel ?
-                  </p>
-                </div>
-                <div class="flex gap-x-2 py-3">
+            </div>
+
+            <div class="flex p-5 space-x-5 border-y border-[#E0E0E0]">
+              <img
+                src="../images/designer.png"
+                class="w-10 h-10 rounded-full"
+                alt=""
+              />
+
+              <div class="space-y-2">
+                <p class="font-bold">Design Conference</p>
+                <p class="text-sm">Today 07:19 AM</p>
+                <p class="text-sm">56 Davion Mission Suite 157</p>
+                <p class="text-sm">Meaghanberg</p>
+
+                <div class="flex space-x-2">
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
                   <img
-                    src="../images/user.png"
-                    alt="user"
-                    class="w-10 h-10 rounded-full"
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
+                  />
+                  <img
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
                   />
 
                   <div
-                    class="w-10 h-10 rounded-full bg-[#4339F2] flex items-center justify-center"
+                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[#4880FF] bg-[#d4e0fa] text-[#4880FF]"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="w-8 h-8 bi bi-plus text-white"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                      />
-                    </svg>
+                    <p class="text-xs">15+</p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="flex p-5 space-x-5 border-y border-[#E0E0E0]">
+              <img
+                src="../images/designer.png"
+                class="w-10 h-10 rounded-full"
+                alt=""
+              />
+
+              <div class="space-y-2">
+                <p class="font-bold">Design Conference</p>
+                <p class="text-sm">Today 07:19 AM</p>
+                <p class="text-sm">56 Davion Mission Suite 157</p>
+                <p class="text-sm">Meaghanberg</p>
+
+                <div class="flex space-x-2">
+                  <img
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
+                  />
+                  <img
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
+                  />
+                  <img
+                    src="../images/designer.png"
+                    class="w-8 h-8 rounded-full"
+                    alt=""
+                  />
+
+                  <div
+                    class="w-8 h-8 flex items-center justify-center rounded-full border border-[#4880FF] bg-[#d4e0fa] text-[#4880FF]"
+                  >
+                    <p class="text-xs">15+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:flex lg:items-center lg:justify-center">
+              <a href="./">
+                <button
+                  class="bg-[#E2EAF8] font-semibold px-5 py-2 m-5 rounded-md"
+                >
+                  See more
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -437,3 +435,4 @@
     </div>
   </body>
 </html>
+
